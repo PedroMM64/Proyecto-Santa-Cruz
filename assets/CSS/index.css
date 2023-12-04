@@ -175,6 +175,7 @@
     box-shadow: 0 .1rem .5rem #333;
     border-top: .8rem solid #58b6f5;
     border-bottom: .8rem solid #58b6f5;
+    padding-bottom: 2.6rem;
 }
 
 .lives-content .lives-slide .iframe {
@@ -203,7 +204,6 @@
     .lives-wrapper .lives-box .swiper-button-prev {
         display: none;
     }
-
     .lives-content .lives-slide .iframe {
         width: 361px;
         height: 272px;
