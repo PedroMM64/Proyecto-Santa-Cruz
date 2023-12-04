@@ -211,9 +211,13 @@
 }
 
 @media screen and (max-width: 460px) {
+    .lives .lives-container {
+        padding: 1rem;
+    }
+
     .lives-content .lives-slide .iframe {
-        width: 360px;
-        height: 190px;
+        width: 380px;
+        height: 244px;
     }
 }
 
