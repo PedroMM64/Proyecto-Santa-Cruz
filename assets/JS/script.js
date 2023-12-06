@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
     const header = document.getElementById("header");
-    const navbar = document.getElementById("navbar");
     const menuIcon = document.getElementById("menu-icon");
     const mobileNav = document.getElementById("mobile-nav");
     const footerIconTop = document.querySelector(".footericonTop");

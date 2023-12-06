@@ -1,0 +1,290 @@
+.tittle {
+    margin-top: 100px;
+}
+
+.tittle .tittle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem 0;
+}
+
+.tittle .tittle-container .tittle-svg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.tittle .tittle-container .tittle-svg-mobile {
+    display: none;
+}
+
+.tittle .tittle-container .tittle-svg svg {
+    width: 100%;
+    height: 100%;
+}
+
+.tittle .tittle-container svg text {
+    text-transform: uppercase;
+    animation: stroke 6s;
+    stroke-width: 2;
+    stroke: rgba(54, 95, 160, 0);
+    fill: rgba(72, 138, 204, 1);
+    font-size: 80px;
+}
+
+@keyframes stroke {
+    0% {
+        fill: rgba(72, 138, 20, 0);
+        stroke: rgba(54, 95, 160, 1);
+        stroke-dashoffset: 25%;
+        stroke-dasharray: 0 50%;
+        stroke-width: 2;
+    }
+
+    70% {
+        fill: rgba(72, 138, 20, 0);
+        stroke: rgba(54, 95, 160, 1);
+    }
+
+    80% {
+        fill: rgba(72, 138, 20, 0);
+        stroke: rgba(54, 95, 160, 1);
+        stroke-width: 3;
+    }
+
+    100% {
+        fill: rgba(72, 138, 204, 1);
+        stroke: rgba(54, 95, 160, 0);
+        stroke-dashoffset: -25%;
+        stroke-dasharray: 50% 0;
+        stroke-width: 0;
+    }
+}
+
+.tittle .tittle-container .tittle-line {
+    width: 60%;
+    height: 3.5px;
+    content: '';
+    background: linear-gradient(-45deg, #b3593e, #e73ccb, #23a6d5, #0ead88);
+    background-size: 400% 400%;
+    animation: gradient 4s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.inicios,
+.trayectoria,
+.memoria {
+    background: #fdfdfd;
+}
+
+.inicios .inicios-container,
+.trayectoria .trayectoria-container,
+.memoria .memoria-container {
+    padding: 2rem 3rem;
+}
+
+h2 {
+    display: inline-block;
+    border-bottom: solid 4px #1abd42;
+    margin-bottom: 2rem;
+}
+
+.inicios .inicios-container {
+    display: flex;
+}
+
+.inicios .inicios-container .inicios-img {
+    display: flex;
+    align-items: center;
+}
+
+.inicios .inicios-container .inicios-img img {
+    width: 125px;
+    animation: floatAnimation 4s ease-in-out infinite alternate;
+}
+
+
+@keyframes floatAnimation {
+    0% {
+        transform: translateY(-10%);
+    }
+
+    50% {
+        transform: translateY(10%);
+    }
+
+    100% {
+        transform: translateY(-10%);
+    }
+}
+
+
+.trayectoria .trayectoria-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.trayectoria .trayectoria-container .trayectoria-img {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.trayectoria .trayectoria-container .trayectoria-img img {
+    border-radius: 16px;
+    width: 50%;
+    --g: 4px;
+    --b: 12px;
+    --c: #7e36a0;
+
+
+    padding: calc(var(--g) + var(--b));
+    --_c: #0000 0 25%, var(--c) 0 50%;
+    --_g1: repeating-linear-gradient(90deg, var(--_c)) repeat-x;
+    --_g2: repeating-linear-gradient(180deg, var(--_c)) repeat-y;
+    background:
+        var(--_g1) var(--_p, 25%) 0, var(--_g2) 0 var(--_p, 125%),
+        var(--_g1) var(--_p, 125%) 100%, var(--_g2) 100% var(--_p, 25%);
+    background-size: 200% var(--b), var(--b) 200%;
+    transition: .3s;
+}
+
+.trayectoria .trayectoria-container .trayectoria-img img:hover {
+    --_p: 75%;
+    filter: grayscale(0%);
+    transform: scale(1.02);
+}
+
+.memoria .memoria-container {
+    display: flex;
+    align-items: center;
+}
+
+.memoria .memoria-container .memoria-box {
+    padding-right: 2rem;
+}
+
+.memoria .memoria-container .memoria-img {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.memoria .memoria-container .memoria-img img {
+    width: 100%;
+    border-radius: 16px;
+    --c: #0f7a9b;
+    --b: 10px;
+    --g: 5px;
+
+    padding: calc(var(--g) + var(--b));
+    --_g: #0000 25%, var(--c) 0;
+    background:
+        conic-gradient(from 180deg at top var(--b) right var(--b), var(--_g)) var(--_i, 200%) 0 /200% var(--_i, var(--b)) no-repeat,
+        conic-gradient(at bottom var(--b) left var(--b), var(--_g)) 0 var(--_i, 200%)/var(--_i, var(--b)) 200% no-repeat;
+    transition: .3s, background-position .3s .3s;
+}
+
+.memoria .memoria-container .memoria-img img:hover {
+    --_i: 100%;
+    transition: .3s, background-size .3s .3s;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .inicios .inicios-container {
+        flex-direction: column;
+    }
+
+    .inicios .inicios-container .inicios-img {
+        justify-content: center;
+        margin-top: 2rem;
+    }
+
+    .memoria .memoria-container {
+        flex-direction: column;
+    }
+
+    .memoria .memoria-container .memoria-box {
+        padding-right: 0;
+    }
+
+    .memoria .memoria-container .memoria-img {
+        justify-content: center;
+        width: 35%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .trayectoria .trayectoria-container {
+        align-items: center;
+    }
+
+    .trayectoria .trayectoria-container .trayectoria-img {
+        width: 75%;
+    }
+
+    .trayectoria .trayectoria-container .trayectoria-img img {
+        width: 100%;
+        --b: 6px;
+    }
+
+    .memoria .memoria-container .memoria-img img {
+        margin-top: 1rem;
+        border-radius: 10px;
+        --b: 7.5px
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .tittle .tittle-container h1 {
+        font-size: 1.34rem;
+    }
+
+    .tittle .tittle-container .tittle-svg-desktop {
+        display: none;
+    }
+
+    .tittle .tittle-container .tittle-svg-mobile {
+        display: flex;
+    }
+
+    .tittle .tittle-container .tittle-svg-mobile svg {
+        margin: 1rem 0;
+    }
+
+    .tittle .tittle-container .tittle-svg-mobile svg text {
+        font-size: 175px;
+    }
+
+    .inicios .inicios-container .inicios-box h2,
+    .trayectoria .trayectoria-container .trayectoria-box h2,
+    .memoria .memoria-container .memoria-box h2 {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .trayectoria .trayectoria-container .trayectoria-img {
+        width: 100%;
+    }
+    .memoria .memoria-container .memoria-img {
+        width: 70%;
+    }
+}
