@@ -253,7 +253,7 @@ h2 {
     }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 478px) {
     .tittle .tittle-container h1 {
         font-size: 1.34rem;
     }
